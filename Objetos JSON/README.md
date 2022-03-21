@@ -1,5 +1,5 @@
 # EstudioDesarrolloWeb
-# TYPESCRIPT
+# OBJETOS JSON
 
 POO: Paradigma de programación que nos permite estructurar
 mejor nuestro código dividiendo todo en:
