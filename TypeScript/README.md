@@ -5,3 +5,15 @@ Es un superset de JavaScript desarrollado por Microsoft. Lenguaje de programaci�
 
 Es un lenguaje interpretado en JavaScript.
 Extensión: archivo.ts
+
+## HOLA MUNDO CON TYPESCRIPT
+---
+El contenido del arcivo TS no se mostrará directamente en el navegador. Para ello se necesitará que todo lo codificado en el archivo TS se pase a un archivo JS a través de la terminal
+
+>En la terminal se debe colocar la Ruta de la carpeta e ir hacia donde se encuentra el archivo.ts y colocar:  
+> tsc archivo.ts --> Esto creará automáticamente 1 archivo JS copia del archivo.ts
+
+Para que los cambios en ambos archivos sean automáticos en la terminal se debe ir a la ruta donde se encuentra el archivo.ts y se debe colocar lo siguiente:
+
+> tsc -w *.ts
+
