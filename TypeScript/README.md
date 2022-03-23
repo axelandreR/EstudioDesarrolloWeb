@@ -43,3 +43,44 @@ let cadena: string | number = "victorrobles.web";
 // Crear un nuevo Tipo de Dato
 type alfanumerico = string | number;
 ```
+---
+## **LET Y VAR EN TYPESCRIPT**
+Diferencia entre Let y Var radica en el alcance de la variable.
+Let: Variable a nivel de bloque.
+Var: Variable a nivel global. 
+
+```typescript
+var numero1 = 10; // Variable global 
+var numero2 = 12; // Variable global
+
+if(numero1 == 10){
+    let numero1 = 44; // Variable local (solo funcionará dentro del If)
+    var numero2 = 55; // Variable global (como es de caracter global. reemplazará a todo valor que s le haya asignado a la variable con anterioridad)
+
+    console.log(numero1, numero2); // Mostrará 44 y 55
+}
+
+console.log(numero1, numero2); // Mostrará 10 y 55
+```
+---
+## **FUNCIONES Y TIPADO FUERTE**
+
+Se pueden escribir funciones como en JavaScript
+
+```typescript
+    function getNumero(numero= 12){
+        return "El número es: " + numero;
+    }
+    console.log(getNumero(55));
+```
+
+Pero en TypeScript también puedes colocar el tipo de dato de entrada y el tipo de Dato de salida.
+
+```typescript
+    function getNumero(numero: number = 12):string{
+        return "El número es: " + numero;
+    }
+    console.log(getNumero(55));
+```
+
+> **IMPORTANTE**: Si los tipos de datos introducidos como entrada o como de salida no coinciden, la mayoría de veces el resultado se mostrará en el navegador, pero en la *Consola* lanzará un error.
