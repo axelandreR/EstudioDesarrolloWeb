@@ -84,3 +84,83 @@ Pero en TypeScript también puedes colocar el tipo de dato de entrada y el tipo 
 ```
 
 > **IMPORTANTE**: Si los tipos de datos introducidos como entrada o como de salida no coinciden, la mayoría de veces el resultado se mostrará en el navegador, pero en la *Consola* lanzará un error.
+
+---
+## **CLASES**
+
+Es un molde con el cual podemos crear una infinidad de objetos co características parecidas.
+
+Las clases poseen *Propiedades* que son las características del objeto.
+
+Los *Metodos* son las funciones o acciones que pueden ejecutar el objeto, estas pueden inclusive cambiar las propiedades del objeto.
+
+```typescript
+    class Camiseta{
+        // Propiedades (Características del objeto)
+        public color: string;
+        public modelo: string;
+        public marca: string;
+        public talla: string;
+        public precio: string;
+        
+        // Metodos (funciones o acciones del objeto)
+        
+
+}
+```
+
+> **IMPORTANTE:** El atributo *Public* de cada propiedad brinda acceso global a cualquier método que las invoque o las quiera alterar, de otras clases que la heradan, etc.
+
+> El atributo **Private*: los atributos o métodos solo son accesibles desde la clase que los define.
+
+¿Como acceder a atributos de tipo Private?
+A través de metodos que apunten hacia la misma clase.
+```typescript
+    class Camiseta{
+        // Propiedades (Características del objeto)
+        private color: string;
+        private modelo: string;
+        private marca: string;
+        private talla: string;
+        private precio: string;
+        
+        // Metodos (funciones o acciones del objeto)
+        public setColor(color){
+            this.color = color;
+        }
+
+        public getColor(){
+            return this.color;
+        }
+
+    }
+
+    var camiseta = new Camiseta();
+    camiseta.setColor("Rojo");
+
+    var playera = new Camiseta();
+    playera.setColor("Azul");
+```
+> El atributo **Protectec*: se puede acceder al atributo desde la clase que los define y desde cualquier otra clase que la herede.
+
+###     **Creando Objetos**
+```typescript
+    var camiseta = new Camiseta(); // Creación del 1er objeto
+
+    // Asignando sus propiedades
+    camiseta.color= "Rojo";
+    camiseta.modelo = "Manga Larga";
+    camiseta.marca = "Nike";
+    camiseta.talla= "L";
+    camiseta.precio= "10";
+
+    var playera = new Camiseta(); // Creación del 2do objeto
+
+    playera.color= "Azul";
+    playera.modelo = "Manga corta";
+    playera.marca = "Adidas";
+    playera.talla= "L";
+    playera.precio= "8";
+
+    console.log(camiseta, playera);
+```
