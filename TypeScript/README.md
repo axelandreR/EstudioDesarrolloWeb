@@ -6,7 +6,7 @@ Es un superset de JavaScript desarrollado por Microsoft. Lenguaje de programaci�
 Es un lenguaje interpretado en JavaScript.
 Extensión: archivo.ts
 
-## HOLA MUNDO CON TYPESCRIPT
+## **HOLA MUNDO CON TYPESCRIPT**
 ---
 El contenido del arcivo TS no se mostrará directamente en el navegador. Para ello se necesitará que todo lo codificado en el archivo TS se pase a un archivo JS a través de la terminal
 
@@ -16,4 +16,30 @@ El contenido del arcivo TS no se mostrará directamente en el navegador. Para el
 Para que los cambios en ambos archivos sean automáticos en la terminal se debe ir a la ruta donde se encuentra el archivo.ts y se debe colocar lo siguiente:
 
 > tsc -w *.ts
+---
+## **TIPOS DE DATOS EN TYPESCRIPT**
+```typescript
+// String
+let cadena: string = "victorrobles.web";
+console.log(cadena);
 
+// Number
+let numero: number = 12;
+
+// Booleano
+let verdadero_falso: boolean = true;
+
+// Any (se puede escribir cualquier tipo de dato)
+let cualquiera: any = "hola";
+cualquiera = 77;
+
+// Arrays
+let lenguajes: Array<string> = ["PHP","12","CSS"]; // Forma 1
+let years: number[] = [12, 13, 14]; // Forma 2
+
+// Múltiples Tipos de datos
+let cadena: string | number = "victorrobles.web";
+
+// Crear un nuevo Tipo de Dato
+type alfanumerico = string | number;
+```
