@@ -164,3 +164,17 @@ A través de metodos que apunten hacia la misma clase.
 
     console.log(camiseta, playera);
 ```
+
+### CONSTRUCTORES
+Metodo especial dentro de una clase y se suele utilizar para darle un valor inicial a los atributos o propiedades de los objetos al crearlo.
+
+```typescript
+    constructor(color, modelo, marca, talla, precio){
+        this.color = color;
+        this.modelo = modelo;
+        this.marca = marca;
+        this.talla = talla;
+        this.precio = precio;
+    }
+    var camiseta = new Camiseta("rojo", "manga larga", "nike", "L", 14); // Crear el nuevo objeto
+```
